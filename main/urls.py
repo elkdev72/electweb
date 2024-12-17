@@ -10,4 +10,6 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('team/', views.team, name='team'),
     path('testimonials/', views.testimonials, name='testimonials'),
+    path('messagesent/', views.message_sent, name='message_sent'),
+
 ]
