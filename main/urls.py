@@ -11,5 +11,11 @@ urlpatterns = [
     path('team/', views.team, name='team'),
     path('testimonials/', views.testimonials, name='testimonials'),
     path('messagesent/', views.message_sent, name='message_sent'),
+    
+    path('payment/', views.payment_view, name='payment'),
+    path('callback/', views.payment_callback, name='payment_callback'),
+    path('stk-status/', views.stk_status_view, name='stk_status'),
+
+
 
 ]
