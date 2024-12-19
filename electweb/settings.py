@@ -183,3 +183,7 @@ JAZZMIN_SETTINGS = {
     "custom_css": "css/custom_admin.css",  # Add your custom CSS file
     "custom_js": "js/custom_admin.js",  # Add your custom JavaScript file
 }
+
+JAZZMIN_SETTINGS = {
+    "site_logo": "images/client_logo.png",
+}
