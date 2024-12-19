@@ -37,7 +37,8 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = [
     '127.0.0.1', 
     'localhost', 
-    '6fd7-91-102-180-6.ngrok-free.app'
+    '6fd7-91-102-180-6.ngrok-free.app',
+    'electweb.onrender.com',
 ]
 
 # Application definition
