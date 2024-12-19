@@ -33,8 +33,12 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['78c6-91-102-180-29.ngrok-free.app','127.0.0.1']
 
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    'localhost', 
+    '6fd7-91-102-180-6.ngrok-free.app'
+]
 
 # Application definition
 
@@ -150,4 +154,4 @@ MPESA_CONSUMER_KEY = env('MPESA_CONSUMER_KEY')
 MPESA_CONSUMER_SECRET = env('MPESA_CONSUMER_SECRET')
 MPESA_SHORTCODE = env('MPESA_SHORTCODE')
 MPESA_PASSKEY =os.getenv('MPESA_PASSKEY')
-MPESA_CALLBACK_URL = env('MPESA_CALLBACK_URL')
+MPESA_CALLBACK_URL = env('CALLBACK_URL')
