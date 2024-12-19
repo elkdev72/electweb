@@ -81,23 +81,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'electweb.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-if not DEBUG:
-    DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# Database Configuration
+DATABASES = {
+    "default": dj_database_url.parse(
+        os.environ.get("DATABASE_URL"),
+        conn_max_age=600,  # Keep connections alive for performance
+        ssl_require=True,  # Enforce SSL for production
+    )
 }
-    
-else:
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-   
     
 
 # Password validation
