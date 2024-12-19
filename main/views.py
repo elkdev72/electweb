@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from django.contrib import messages
+from django.conf.urls import handler404
 
 
 def index(request):
@@ -272,3 +273,12 @@ def payment_callback(request):
 
     except (json.JSONDecodeError, KeyError) as e:
         return HttpResponseBadRequest(f"Invalid request data: {str(e)}")
+
+
+
+
+
+def custom_404_view(request, exception):
+    return render(request, "404.html", status=404)
+
+handler404 = custom_404_view

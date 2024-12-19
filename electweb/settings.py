@@ -128,9 +128,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR/'assets'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'main/static',
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'main/static',
+# ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
@@ -153,3 +153,18 @@ MPESA_CONSUMER_SECRET = env('MPESA_CONSUMER_SECRET')
 MPESA_SHORTCODE = env('MPESA_SHORTCODE')
 MPESA_PASSKEY =os.getenv('MPESA_PASSKEY')
 CALLBACK_URL = env('CALLBACK_URL')
+
+
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
+#     "handlers": {
+#         "console": {
+#             "class": "logging.StreamHandler",
+#         },
+#     },
+#     "root": {
+#         "handlers": ["console"],
+#         "level": "INFO",  # Change DEBUG to INFO or WARNING for production
+#     },
+# }
