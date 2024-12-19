@@ -40,6 +40,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1',).split(",")
 # Application definition
 
 INSTALLED_APPS = [
+        'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -168,3 +169,17 @@ CALLBACK_URL = env('CALLBACK_URL')
 #         "level": "INFO",  # Change DEBUG to INFO or WARNING for production
 #     },
 # }
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Client Admin",
+    "site_header": "Client Dashboard",
+    "site_brand": "Client Logo",
+    "site_logo": "static/images/client_logo.png",  # Path to your logo
+    "welcome_sign": "Welcome to Client Admin",
+    "search_model": "auth.User",  # Default search model
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": ["auth"],  # Hide apps your client doesn’t need
+    "custom_css": "css/custom_admin.css",  # Add your custom CSS file
+    "custom_js": "js/custom_admin.js",  # Add your custom JavaScript file
+}
