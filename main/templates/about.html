@@ -28,6 +28,8 @@
 
         <!-- Template Stylesheet -->
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+
     </head>
 
     <body>
@@ -46,8 +48,8 @@
         <div class="container-fluid header-top">
             <div class="container d-flex align-items-center">
                 <div class="d-flex align-items-center h-100">
-                    <a href="#" class="navbar-brand" style="height: 125px;">
-                        <h1 class="text-primary mb-0"><i class="fas fa-bolt"></i> Electra</h1>
+                    <a href="{%url 'index'%}" class="navbar-brand" style="height: 125px;">
+                        <h1 class="text-primary mb-0"><i class="fas fa-bolt"></i> Oneshelectricals</h1>
                     </a>
                 </div>
                 <div class="w-100 h-100">
@@ -59,7 +61,7 @@
                                         <a href="#" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
                                     </div>
                                     <div class="ps-3">
-                                        <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>example@gmail.com</a>
+                                        <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>oneshelectricalslimited@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
